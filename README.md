@@ -5,7 +5,7 @@ reworked to support transparency as well as a past picked colors.
 
 
 Image link here...
-![A Color Picker](https://raw.githubusercontent.com/bm98/AColorPicker_bm98/master/doc/ColorPicker.png)
+![A Color Picker](https://raw.githubusercontent.com/bm98/AColorPicker_bm98/master/bm98_AColorPicker/doc/ColorPicker.png)
 
 
 ### Credits 
