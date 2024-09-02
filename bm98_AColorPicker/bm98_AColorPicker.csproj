@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F7BB36D7-E3CB-430C-A248-CEB000DD0A1D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>bm98_AColorPicker</RootNamespace>
+    <AssemblyName>bm98_AColorPicker</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="dNetBm98">
+      <HintPath>..\..\Redist\dNetBm98.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorPickedEventArgs.cs" />
+    <Compile Include="frmAColorPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAColorPicker.Designer.cs">
+      <DependentUpon>frmAColorPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UC_2DColorBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_2DColorBox.Designer.cs">
+      <DependentUpon>UC_2DColorBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_ColorQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_ColorQueue.Designer.cs">
+      <DependentUpon>UC_ColorQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_VerticalColorSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_VerticalColorSlider.Designer.cs">
+      <DependentUpon>UC_VerticalColorSlider.cs</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAColorPicker.resx">
+      <DependentUpon>frmAColorPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_2DColorBox.resx">
+      <DependentUpon>UC_2DColorBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_ColorQueue.resx">
+      <DependentUpon>UC_ColorQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_VerticalColorSlider.resx">
+      <DependentUpon>UC_VerticalColorSlider.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release copy $(TargetDir)*.* $(SolutionDir)..\Redist\
+if $(ConfigurationName) == Release del $(SolutionDir)..\Redist\*.tmp</PostBuildEvent>
+  </PropertyGroup>
+</Project>

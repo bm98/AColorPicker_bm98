@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34616.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AColorPickerApp", "AColorPickerApp\AColorPickerApp.csproj", "{22E08F67-4E40-4A92-876B-410FFD49B20E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bm98_AColorPicker", "bm98_AColorPicker\bm98_AColorPicker.csproj", "{F7BB36D7-E3CB-430C-A248-CEB000DD0A1D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22E08F67-4E40-4A92-876B-410FFD49B20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E08F67-4E40-4A92-876B-410FFD49B20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E08F67-4E40-4A92-876B-410FFD49B20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E08F67-4E40-4A92-876B-410FFD49B20E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BB36D7-E3CB-430C-A248-CEB000DD0A1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BB36D7-E3CB-430C-A248-CEB000DD0A1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BB36D7-E3CB-430C-A248-CEB000DD0A1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BB36D7-E3CB-430C-A248-CEB000DD0A1D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF0BF5BC-C576-4A78-A1FD-81D96BCD99C8}
+	EndGlobalSection
+EndGlobal
